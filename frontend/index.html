@@ -801,7 +801,7 @@
 <div class="savings">
     <input type="text" id="subEmail" placeholder="Enter E-mail to Get $50 Cash Coupons!">
     <p class="pri_item">You will receive our latest updates, news, and promotions from Tomtop.</p>
-    <input type="button" value="Subscribe" onclick="return ischeckemail()" class="btn btn-orange">
+    <input id="subscribe" type="button" value="Subscribe" onclick="ischeckemail()" class="btn btn-orange">
     <a title="Privacy Policies">
         Privacy Policies</a>
 </div>
@@ -858,5 +858,15 @@ changeSlide();
 
 function redirect_signup(){
 window.location.href="./login.html"
+}
+
+
+function ischeckemail() {
+    let x = document.getElementById(`subscribe`).value 
+    if (x.length>0) {
+    alert(`$50 cashback Coupon has been sent on this email`)
+    } else {
+    alert(`please fill the E-mail`)
+    }
 }
 </script>
