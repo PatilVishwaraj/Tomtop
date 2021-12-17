@@ -5,11 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Register</title>
 </head>
 <body>
-    <div id="Register-box">
-        
+    <a href="index.html">
+    <div class="login-logo">
+<img src="https://static.tomtop.com/tomtop/acount/icon/logo.png?v=3">
+    </div></a>
+    <div class="login-page">
+        <div class="login-box">
+            <form action="" id="signupForm" id="loginForm" onsubmit="Signup(event)">
+                <h3 class="tt">create Account</h3>
+
+<div class="m_text">
+    <div class="text_c"><i class="far fa-envelope" class="icon_psw"></i>
+        <input name="email" type="text" placeholder="Email address" class="bm_text" id="email">
+        <p id="error_info1">Email address</p>
     </div>
+</div>
+<div class="m_text">
+    <div class="text_c"><i class="fas fa-lock" class="icon_psw"></i>
+        <input name="pw" type="password" placeholder="6-20 characters (letters or numbers only)" class="bm_text" id="password1">
+        <p id="error_info2">Password</p>
+    </div>
+    <div class="text_c" style="margin-top:20px;"><i class="fas fa-lock" class="icon_psw"></i>
+        <input name="pw" type="password" placeholder="Enter Password Again" class="bm_text" id="password2">
+        <p id="error_info3">Password</p>
+    </div>
+</div>
+<div class="agress_c">
+    <p>
+     <input id="agreee" name="agreee" type="checkbox" value="1">
+        I agree to the tomtop<a href="" rel="">
+            Terms &amp; Conditions</a>,
+        <a href="#">
+            Privacy Policy.</a>
+    </p>
+</div>
+<div class="agress_c">
+    <p><input type="checkbox" name="signupNewsletter" value="1" id="remember" >Yes, Sign up our newsletter, get  $50 coupons in your first email! You will receive our latest updates, news, and promotions from Tomtop.</p>
+</div>
+<input type="button" value="Create My Account" class="bm_btn" onclick="signUp()">
+<p class="hq_points"><em>&gt;&gt;</em>Register at tomtop.com and receive 10 points.</p>
+    <div class="create_account">
+        <em>Already have an account ?</em>
+        <a href="login.html">Sign in</a>
+</div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="./js/login.js"></script>
 </body>
 </html>

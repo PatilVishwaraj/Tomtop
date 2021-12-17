@@ -4,9 +4,193 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link rel="icon" href="//static.tomtop.com/tomtop/favicon.ico?V=1.1.1" type="image/x-icon">
+    <title>cart</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <style>
+        #Crat-main {
+            width: 50%;
+            margin: auto;
+            border: 2px solid red;
+            border-radius: 5px ;
+        }
+        #address {
+            width: 50%;
+            margin: auto;
+            align-items: center;
+        }
+        #address > form {
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        #Product {
+            display: grid;
+            grid-gap: 5%;
+            grid-template-columns: 25% 70%;
+        }
+        #Quant {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+
+        }
+        #Quantity {
+            text-align: center;
+        }
+        #price {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            margin-top: 20px;
+
+        }
+        #Quant > button {
+            border: 1px solid black;
+        }
+        #tot_RS {
+            color: darkorange;
+            margin-left: 200px;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="Crat-main">
+        <div id="Product">
+            <div id="prod_img">
+                <img src="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/1/PB0246B-1/PB0246B-1-1-f34c-Sb8F.jpg" alt="">
+            </div>
+            <div id="prod_details">
+                <h4 style="margin: 20px;">2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet</h4>  
+                <div class="m_progress_bar"  style="margin-left: 20px;">
+                    <div class=" bar_wrap" style="background-color: #ccc;">
+                        <div style="width:67%" class="bar_wrap_cont"></div>
+                    </div>
+                    <div class="lineBlock bar_sale">
+                        <span class="pro_sell" data-sell="303">303</span>/
+                        <span class="pro_count" data-procount="446">446</span>
+                        pcs sold                                    </div>
+                </div>
+                <div id="price">
+                    <div id="Quant">
+                        <button class="plus_minus" onclick="minus()">-</button>
+                        <div id="Quantity" style=" border: 1px solid black;"></div>
+                        <button class="plus_minus" onclick="plus()">+</button>
+                    </div>
+                    <div id="tot_RS">Rs. </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="address">
+    <form class="PaymenForm" onsubmit="nextPage(event)">
+
+        <h2 style="margin-left: 10px;">Contact information</h2>
+        <div class="Form_Box" id="remove-btm">
+          <input id="Email" type="email" style="width: 400px; margin: 7px;" class="Form_Ip" name="user_email"
+            placeholder="Email">
+          <label class="Form_Invisible" for="user_email">Email</label>
+        </div>
+        <div style="display:flex; margin-top: none; margin-left: 10px;">
+          <input class="news-checkbox" type="checkbox" checked="checked">
+          <label type="checkbox__label" for="checkout_buyer_accepts_marketing" style="font-size: 12px;">
+            Keep me up to date on news and offers
+          </label>
+        </div>
+
+        <div>
+          <h2 style="margin-left: 10px;">
+            Shipping address
+          </h2>
+
+          <div style="display: flex;">
+            <div>
+              <input id="Payment_username" class="Form_Ip_Name" type="text" name="first_name" placeholder="First name">
+            </div>
+            <div>
+              <input id="Payment_lastname" class="Form_Ip_Name" type="text" name="last_name" placeholder="Last name">
+            </div>
+          </div>
+
+          <div>
+            <input id="Payment_address" class="Payment_Form_Ip" type="text" name="Address_line1" placeholder="Address">
+            <label class="Form_Invisible" for="Address_line1">Address_line1</label>
+          </div>
+          <div>
+            <input id="Payment_address1" class="Payment_Form_Ip" type="text" name="Address_line2"
+              placeholder="Apartment, suite, etc. (optional)">
+            <label class="Form_Invisible" for="Address_line2">Address_line2</label>
+          </div>
+          <div>
+            <input id="city" class="Payment_Form_Ip" type="text" name="City" placeholder="City">
+            <label class="Form_Invisible" for="City">City</label>
+          </div>
+
+          <div style="display: flex;">
+            <div>
+              <input id="Payment_pin" class="pin" type="tel" name="PIN" placeholder="PIN CODE">
+            </div>
+          </div>
+          <div>
+            <div>
+              <input type="checkbox" value="1" name="remember_me" id="remember_me " style="margin-left: 10px;">
+              <label class="checkbox_label" for="remember_me" style="font-size: 14px; color: rgba(18, 40, 76, 0.8);">
+                Save this information for next time
+              </label>
+            </div>
+            <p style="color:  rgba(18, 40, 76, 0.6); font-size: 12px; text-align: left; margin-left: 8px;">To learn more
+              about how we use your information and your rights, see <a href="" style="color: grey;">Privacy Note</a>
+            </p>
+          </div>
+          <div>
+            <a href="" style="color: #12284c; font-size: 12px;">
+               RETURN TO CART</a>
+               <a href="./payment.html">
+                <button class="End_btn" onclick="window.location.href = `payment_2.html`" style="width: 300px; margin-left: 150px; font-weight: 600;" >CONTINUE TO SHIPPING
+                  METHOD</button></a>
+          </div>
+        </div>
+
+
+
+
+        <hr />
+        <p style="font-size: 12px; ">All rights reserved bluemercury</p>
+      </div>
+
+      </form></div>
+    <script>
+        var num = 1
+        var price = 45
+        var Quantity = document.getElementById(`Quantity`)
+            Quantity.innerHTML = num
+        var total_rs = document.getElementById(`tot_RS`)
+            total_rs.innerHTML = `US$${price}`
+        function minus() {
+            if (num>1) {
+                num--
+                price -= 45
+                price.toFixed(2)
+            } 
+            Quantity.innerHTML = null
+            Quantity.innerHTML = num
+            total_rs.innerHTML = null
+            total_rs.innerHTML = `US$${price}`
+
+        }
+        
+        function plus() {
+                num++
+                price += 45
+                price.toFixed(2)
+            Quantity.innerHTML = null
+            Quantity.innerHTML = num
+            total_rs.innerHTML = null
+            total_rs.innerHTML = `US$${price}`
+        }
+
+        // function goto_payment() {
+        //     window.location.href = "payment_2.html";
+        // }
+    </script>
 </body>
 </html>
